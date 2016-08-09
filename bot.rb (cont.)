@@ -1,0 +1,7 @@
+@client  = TweetStream::Client.new
+
+puts "[STARTING] bot..."
+@client.userstream() do |status| 
+  # Cada status recebido pelo User Stream será manipulado dentro desse bloco
+  puts status.text  # print do texto do tweet
+end
